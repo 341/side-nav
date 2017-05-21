@@ -1,0 +1,98 @@
+$sidenav-width-open: 300px;
+$sidenav-width-closed: 80px;
+$brand-primary: #232323;
+
+.bs-sidenav {
+	position: fixed;
+	width: $sidenav-width-closed;
+	background: $brand-primary;
+	color: #fff;
+	display: flex;
+	align-content: flex-end;
+	flex-direction: column;
+	height: 100%;
+	left: 0;
+	top: 0;
+	padding: 0;
+	z-index: 1030;
+	-moz-transition: all .3s ease-in;
+	-o-transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+	transition: all .3s ease-in;
+
+	&[class*="hide"] {
+		-moz-transition: all .3s ease-in;
+		-o-transition: all .3s ease-in;
+		-webkit-transition: all .3s ease-in;
+		transition: all .3s ease-in;
+	}
+
+	&[class*="showis"] {
+		-moz-transition: all .3s ease-in;
+		-o-transition: all .3s ease-in;
+		-webkit-transition: all .3s ease-in;
+		transition: all .3s ease-in;
+	}
+
+	.collapse-sidenav {
+		display: block;
+	}
+
+	&.isMobile {
+		&.showisMobile {
+			width: $sidenav-width-open;
+		}
+		&.hideisMobile {
+			left: -$sidenav-width-closed;
+			width: $sidenav-width-closed;
+			.collapse-sidenav {
+				position: absolute;
+				right: -$sidenav-width-closed;
+			}
+		}
+	}
+	&.isTablet {
+		&.showisTablet {
+			width: $sidenav-width-open;
+		}
+		&.hideisTablet {
+			left: -$sidenav-width-closed;
+			width: $sidenav-width-closed;
+			.collapse-sidenav {
+				position: absolute;
+				right: -$sidenav-width-closed;
+			}
+		}
+	}
+	&.isDesktop {
+		&.showisDesktop {
+			width: $sidenav-width-open;
+		}
+		&.hideisDesktop {
+			left: -$sidenav-width-closed;
+			width: $sidenav-width-closed;
+			.collapse-sidenav {
+				position: absolute;
+				right: -$sidenav-width-closed;
+			}
+		}
+	}
+	&.isJumbo {
+		&.showisJumbo {
+			width: $sidenav-width-open;
+		}
+		&.hideisJumbo {
+			left: -$sidenav-width-closed;
+			width: $sidenav-width-closed;
+			.collapse-sidenav {
+				position: absolute;
+				right: -$sidenav-width-closed;
+			}
+		}
+	}
+
+	&.open {
+		width: $sidenav-width-open !important;
+	}
+}
+
